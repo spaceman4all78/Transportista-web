@@ -1,2 +1,1 @@
-# Transportista-web
-This is a web page, used for information.
+Interactive website for a cargo transportation company, featuring a services section (containerized, refrigerated, dry box and chassis freight), a contact form, and real-time coverage/tracking highlights.
