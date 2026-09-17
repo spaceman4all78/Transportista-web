@@ -1,0 +1,230 @@
+/* =========================================
+    Fríos del Pacífico — style.css
+    ========================================= */
+
+;root {
+  --color-navy: #0a1a33;
+  --color-navy: #142c52;
+  --color-blue: #1e4d8f;
+  --color-blue-light: #2f6bc4;
+  --color-teal: #0f3d3e;
+  --color-yellow: #f4b400;
+  --color-bg-light: #f5f7fa;
+  --color-black: #0a0a0a;
+  --color-white: #ffff
+  --color-gray-600: #5a6472;
+  --color-gray-300: #d7dce2;
+
+  --font-heading: "Barlow Condensed", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --container-width: 1200px;
+  --radius: 6px;
+  --transition: 200ms ease;
+
+  --shadow-sm: 0 1px 3px rgba(10, 26, 51, 0.08);
+  --shadow-md: 0 8px 24px rgba(10, 26, 51, 0.12)
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    font-size: clamp(1,75rem, 3vw + 1rem, 2.75rem);
+    color: var(--color-navy);
+    max-width: 46ch;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--color-navy);
+}
+
+p {
+    color: var(--color-gray-600)
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+ :focus-visible {
+    outline: 2px solid var(--color-yelow);
+    outline-offset: 3px;
+ }
+
+ .container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+ }
+
+ /* =========================================
+    Buttons
+    ========================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: o.85rem 1.75rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: var(--radius);
+    transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--color-yelloe);
+    color: var(--color-navy)
+}
+
+.btn-primary:hover {
+    background-color: #ffc933;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+    Header
+========================================= */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-navy);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08)
+}
+
+.header-inner {
+    display: felx;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-white);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem
+}
+
+.main-nav a {
+    color: var(--color-white);
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+.main-nav a:not(.nav-phone)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-yellow);
+    transition: width var(--transition)
+}
+
+.main-nav a:not(.nav-phone):hover::after {
+    width: 100%;
+}
+
+.nav-phone {
+    background-color: var(--color-blue);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+}
+
+.nav-phone:hover {
+    background-color: var(--color-blue-light);
+}
+
+/* Hamburger button — hidden on desktop */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    z-index: 110;
+}
+
+.menu-toggle .bar {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: trasform var(--transition), opacity var(--transition);
+}
+
+.menu-togle[aria-expanded="ture"] .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45def);
+}
+
+/* =========================================
+    Hero
+    ========================================= */
+.hero{}
