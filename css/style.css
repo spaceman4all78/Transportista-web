@@ -2,7 +2,7 @@
     Fríos del Pacífico — style.css
     ========================================= */
 
-;root {
+:root {
   --color-navy: #0a1a33;
   --color-navy: #142c52;
   --color-blue: #1e4d8f;
@@ -11,7 +11,7 @@
   --color-yellow: #f4b400;
   --color-bg-light: #f5f7fa;
   --color-black: #0a0a0a;
-  --color-white: #ffff
+  --color-white: #ffff;
   --color-gray-600: #5a6472;
   --color-gray-300: #d7dce2;
 
@@ -23,7 +23,7 @@
   --transition: 200ms ease;
 
   --shadow-sm: 0 1px 3px rgba(10, 26, 51, 0.08);
-  --shadow-md: 0 8px 24px rgba(10, 26, 51, 0.12)
+  --shadow-md: 0 8px 24px rgba(10, 26, 51, 0.12);
 }
 
 /* --- Reset --- */
@@ -32,7 +32,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 html {
@@ -41,7 +41,7 @@ html {
 
 body {
     font-family: var(--font-body);
-    color: var(--color-white);
+    color: var(--color-black);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -65,7 +65,7 @@ h3 {
 }
 
 p {
-    color: var(--color-gray-600)
+    color: var(--color-gray-600);
 }
 
 a {
@@ -108,7 +108,7 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: o.85rem 1.75rem;
+    padding: 0.85rem 1.75rem;
     font-weight: 600;
     font-size: 0.95rem;
     border-radius: var(--radius);
@@ -116,8 +116,8 @@ button {
 }
 
 .btn-primary {
-    background-color: var(--color-yelloe);
-    color: var(--color-navy)
+    background-color: var(--color-yellow);
+    color: var(--color-navy);
 }
 
 .btn-primary:hover {
@@ -129,6 +129,11 @@ button {
     border: 1.5px solid rgba(255, 255, 255, 0.08);
 }
 
+.btn-outline:hover {
+    border-color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
 /* =========================================
     Header
 ========================================= */
@@ -137,11 +142,11 @@ button {
     top: 0;
     z-index: 100;
     background-color: var(--color-navy);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .header-inner {
-    display: felx;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     height: 72px;
@@ -159,7 +164,7 @@ button {
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 2rem
+    gap: 2rem;
 }
 
 .main-nav a {
@@ -221,14 +226,14 @@ button {
 }
 
 .menu-toggle[aria-expanded="true"] .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45def);
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 /* =========================================
     Hero
     ========================================= */
 .hero {
-    background: inner-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 55%, var(--color-black)  100%);
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 55%, var(--color-black)  100%);
     padding: 6rem 0 5rem;
 }
 
@@ -274,7 +279,7 @@ button {
    Trust strip
    ========================================= */
 
-.trust-stript {
+.trust-strip {
     background-color: var(--color-navy-light);
 }
 
@@ -288,10 +293,10 @@ button {
 
 .trust-list li {
     padding: 2rem 1.5rem;
-    border-left: 1px solid rgba(255, 255, 255, 0.01)
+    border-left: 1px solid rgba(255, 255, 255, 0.01);
 }
 
-.trust-list li:first-child{
+.trust-list li:first-child {
     border-left: none;
 }
 
@@ -301,4 +306,8 @@ button {
     margin-bottom: 0.4rem;
 }
 
-.trust-list{}
+.trust-list p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.88rem
+}
+
